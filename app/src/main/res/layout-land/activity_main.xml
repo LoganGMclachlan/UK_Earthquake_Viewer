@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <!-- StudentNo: s2225362
+    Name: Logan Mclachlan -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="UK Earthquake information\n S2225362"
+            android:textSize="13pt"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:padding="3pt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date:  "
+                    android:textSize="9pt" />
+
+                <EditText
+                    android:id="@+id/dateSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10px"
+                    android:background="@color/LightGrey"
+                    android:inputType="date"
+                    android:maxWidth="450px"
+                    android:minWidth="350px"
+                    android:textSize="9pt" />
+
+                <Button
+                    android:id="@+id/searchDateButton"
+                    android:layout_width="250px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:text="Search" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earthquake:"
+                    android:textSize="9pt" />
+
+                <EditText
+                    android:id="@+id/earthquakeSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10px"
+                    android:background="@color/LightGrey"
+                    android:maxWidth="450px"
+                    android:minWidth="350px"
+                    android:textSize="9pt" />
+
+                <Button
+                    android:id="@+id/searchEarthquakeButton"
+                    android:layout_width="250px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:text="Search" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/resetList"
+                android:layout_width="350px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="View All" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/extraInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/LightGrey"
+            android:padding="3pt"
+            android:text="Click grey button for more info"
+            android:textSize="10pt" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="50pt"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="99">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/earthquakeData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
